@@ -1,6 +1,6 @@
 {
   "name": "vin-validator",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "VIN format validation",
   "main": "index.js",
   "scripts": {
