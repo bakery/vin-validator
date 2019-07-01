@@ -4,6 +4,12 @@ function validate(vin) {
   }
 
   vin = vin.toLowerCase();
+  
+  // XX: support HIN numbers for boats
+  if (/^[a-z]{3}[0-9]{5}[0-9a-z]{2}[0-9]{2}$/.test(vin)) {
+    return true;
+  }
+
   if (!/^[a-hj-npr-z0-9]{8}[0-9xX][a-hj-npr-z0-9]{8}$/.test(vin)) {
     return false;
   }

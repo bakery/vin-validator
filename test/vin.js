@@ -144,6 +144,19 @@ describe('Given a VIN with a correct check digit', function() {
   });
 });
 
+describe('Given a VIN for a jetski', function() {
+  var vin = 'YDV30979J819';
+
+  describe('When the VIN is validated', function() {
+    var valid;
+    beforeEach(function() { valid = vinValidator.validate(vin); })
+
+    it('Then it should pass', function() {
+      expect(valid).to.be.true;
+    });
+  });
+});
+
 describe('Given null value', function() {
   var vin = null;
 
