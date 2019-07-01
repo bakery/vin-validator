@@ -155,6 +155,15 @@ describe('Given a VIN for a jetski', function() {
       expect(valid).to.be.true;
     });
   });
+
+  describe('When the VIN is validated', function() {
+    var valid;
+    beforeEach(function() { valid = vinValidator.validate('US-YAMA3933E919'); })
+
+    it('Then it should pass', function() {
+      expect(valid).to.be.true;
+    });
+  });
 });
 
 describe('Given null value', function() {

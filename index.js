@@ -6,7 +6,8 @@ function validate(vin) {
   vin = vin.toLowerCase();
   
   // XX: support HIN numbers for boats
-  if (/^[a-z]{3}[0-9]{5}[0-9a-z]{2}[0-9]{2}$/.test(vin)) {
+  // including things like US-YAMA3933E919
+  if (/^(?:[a-z]{2}-)?[a-z]{3,4}[0-9]{3,5}[0-9a-z]{2}[0-9]{2}$/.test(vin)) {
     return true;
   }
 
